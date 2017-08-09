@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{353AC42F-F56C-D715-11F5-B361843F03F7}</ProjectGuid>
+    <ProjectGuid>{57DAE2F3-F06A-B960-7514-A99FD78DD54B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\AutoRotate.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\ChangeVideoExample.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\DemoInfo.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\FrameExtract.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Mapping3D.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\SampleApp_Multiple.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\ChangeAudioTrack.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\LoadFromBuffer.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\NativeMediaOpen.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\PlaybackSync.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\StartEndPoint.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\VideoTrigger.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\SimpleController.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\SphereDemo.cs" />
+     <Compile Include="Assets\AVProVideo\Demos\Scripts\VCR.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\ApplyToMaterial.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\ApplyToMesh.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\AudioOutput.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\CubemapCube.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\DisplayBackground.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\DisplayIMGUI.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\DisplayUGUI.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\MediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\SubtitlesUGUI.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\NGUI\ApplyToTextureWidgetNGUI.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Actions\AVProVideoControl.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Actions\AVProVideoEvent.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Actions\AVProVideoInfo.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Actions\AVProVideoPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Actions\Internal\AVProVideoActionBase.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Components\UpdateStereoMaterial.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\AndroidMediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\AudioOutputManager.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\BaseMediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\Interfaces.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\NullMediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\OSXMediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\WebGLMediaPlayer.cs" />
+     <Compile Include="Assets\AVProVideo\Scripts\Internal\WindowsMediaPlayer.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\GVRDemoManager.cs" />
@@ -150,21 +189,45 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\Scripts\VideoTeleport.cs" />
+     <Compile Include="Assets\Udacity\Scripts\Coin.cs" />
+     <Compile Include="Assets\Udacity\Scripts\DieAfterSeconds.cs" />
+     <Compile Include="Assets\Udacity\Scripts\Door.cs" />
+     <Compile Include="Assets\Udacity\Scripts\Key.cs" />
+     <Compile Include="Assets\Udacity\Scripts\SignPost.cs" />
+     <Compile Include="Assets\Udacity\Scripts\Waypoint.cs" />
      <Compile Include="Assets\VideoControl.cs" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Lit-Diffuse.shader" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-UI-Default-Stereo.shader" />
+     <None Include="Assets\AVProVideo\Demos\Materials\UI-Default-ExtraTexture.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere-StereoUV.shader" />
      <None Include="Assets\FlippyShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Unlit-Transparent.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo.cginc" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Unlit-AndroidOES.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-IMGUI-Transparent.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Background-FullScreenTransparent.shader" />
      <None Include="Assets\GoogleVR\Demos\Environment\DemoEnvUnlitGrayscale.shader" />
+     <None Include="Assets\AVProVideo\Demos\Materials\UI-DefaultFont-ExtraTexture.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere-AndroidOES.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Background-FullScreen.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoAmbientOcclusion.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere-Transparent.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-UI-Default-Transparent.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoUnlitGrayscaleToColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Unlit.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
+     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Lit-Transparent-Diffuse.shader" />
      <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoStereoShader.shader" />
