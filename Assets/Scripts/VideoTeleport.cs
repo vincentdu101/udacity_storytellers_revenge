@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VideoTeleport : MonoBehaviour {
 
 	public GameObject camera;
+	public Text videoChosen;
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +19,10 @@ public class VideoTeleport : MonoBehaviour {
 	}
 
 	public void goToVideo(string choice) {
-		GameObject videoPlayerObj = GameObject.FindGameObjectWithTag (choice + "Player");
-		GameObject videoPlayer = GameObject.Find (choice + "VideoPlayer");
-		Vector3 position = videoPlayerObj.transform.position;
+		GameObject controls = GameObject.FindGameObjectWithTag ("Controls");
+		Vector3 position = controls.transform.position;
+		position.z -= 3;
 		camera.transform.position = position;
-		videoPlayer.SetActive (true);
+		videoChosen.text = choice;
 	}
 }

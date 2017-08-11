@@ -189,6 +189,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\Scripts\VideoControl.cs" />
      <Compile Include="Assets\Scripts\VideoTeleport.cs" />
      <Compile Include="Assets\Udacity\Scripts\Coin.cs" />
      <Compile Include="Assets\Udacity\Scripts\DieAfterSeconds.cs" />
@@ -196,7 +197,6 @@
      <Compile Include="Assets\Udacity\Scripts\Key.cs" />
      <Compile Include="Assets\Udacity\Scripts\SignPost.cs" />
      <Compile Include="Assets\Udacity\Scripts\Waypoint.cs" />
-     <Compile Include="Assets\VideoControl.cs" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Lit-Diffuse.shader" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-UI-Default-Stereo.shader" />
