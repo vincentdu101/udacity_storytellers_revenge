@@ -16,6 +16,8 @@ public class VideoControl : MonoBehaviour {
 	public MediaPlayer video1;
 	public MediaPlayer video2;
 
+	private MediaPlayer currentVideo;
+
 	void Start () {
 //		videoPlayer = GetComponent<UnityEngine.Video.VideoPlayer> ();
 //
@@ -32,15 +34,25 @@ public class VideoControl : MonoBehaviour {
 	//Check if input keys have been pressed and call methods accordingly.
 	void Update(){
 		//Play or pause the video.
-//		if (Input.GetKeyDown ("space")) 
+//		if (Input.anyKeyDown) 
 //		{
-//			if (videoPlayer.isPlaying)
-//				videoPlayer.Pause ();
-//			else
-//				videoPlayer.Play();
-//			audioSource.Play();
+//			if (currentVideo != null && currentVideo.Control.IsPlaying()) {
+//				currentVideo.Control.Pause();
+//				GameObject controls = GameObject.Find ("Controls");
+//				Vector3 position = controls.transform.position;
+//				position.z -= 3;
+//				camera.transform.position = position;
+//			}
+//
 //		}
 
+	}
+
+	public void Pause() {
+		GameObject controls = GameObject.Find ("Controls");
+		Vector3 position = controls.transform.position;
+		position.z -= 3;
+		camera.transform.position = position;
 	}
 
 	public void Play() {

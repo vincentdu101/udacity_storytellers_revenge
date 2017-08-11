@@ -256,12 +256,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 127795290}
+--- !u!1 &244583031 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198424, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
+  m_PrefabInternal: {fileID: 1696728571}
 --- !u!114 &244583032 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d,
     type: 2}
   m_PrefabInternal: {fileID: 1696728571}
   m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+--- !u!114 &244583033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244583031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5fe326cbae64ef384ffd6fcfd8d686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1014974863}
+  videoChosen: {fileID: 0}
+  video1: {fileID: 0}
+  video2: {fileID: 0}
+--- !u!114 &244583034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244583031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 244583033}
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &352531563
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,12 +413,61 @@ Transform:
   m_Father: {fileID: 1014974868}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &570798056 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198424, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
+  m_PrefabInternal: {fileID: 1784959569}
 --- !u!114 &570798057 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d,
     type: 2}
   m_PrefabInternal: {fileID: 1784959569}
   m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+--- !u!114 &570798058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570798056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5fe326cbae64ef384ffd6fcfd8d686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1014974863}
+  videoChosen: {fileID: 0}
+  video1: {fileID: 0}
+  video2: {fileID: 0}
+--- !u!114 &570798059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570798056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 570798058}
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &629338753
 GameObject:
   m_ObjectHideFlags: 0
