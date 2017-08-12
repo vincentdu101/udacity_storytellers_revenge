@@ -15,6 +15,8 @@ public class VideoControl : MonoBehaviour {
 	public Text videoChosen; 
 	public MediaPlayer video1;
 	public MediaPlayer video2;
+	public MediaPlayer videoPlayer;
+	public GameObject videoSphere;
 
 	private MediaPlayer currentVideo;
 
@@ -53,6 +55,7 @@ public class VideoControl : MonoBehaviour {
 		Vector3 position = controls.transform.position;
 		position.z -= 3;
 		camera.transform.position = position;
+		videoPlayer.Control.Pause ();
 	}
 
 	public void Play() {
