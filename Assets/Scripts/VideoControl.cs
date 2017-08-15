@@ -17,7 +17,6 @@ public class VideoControl : MonoBehaviour {
 	public MediaPlayer video2;
 	public MediaPlayer videoPlayer;
 	public GameObject videoSphere;
-
 	private MediaPlayer currentVideo;
 
 	void Start () {
@@ -51,10 +50,6 @@ public class VideoControl : MonoBehaviour {
 	}
 
 	public void Pause() {
-		GameObject controls = GameObject.Find ("Controls");
-		Vector3 position = controls.transform.position;
-		position.z -= 3;
-		camera.transform.position = position;
 		videoPlayer.Control.Pause ();
 	}
 
@@ -71,10 +66,20 @@ public class VideoControl : MonoBehaviour {
 		}
 	}
 
+	public void PlayBtn() {
+		videoPlayer.Control.Play ();
+	}
+
+	public void Restart() {
+		videoPlayer.Control.Seek (0.0f);
+	}
+
 	public void goToMainMenu() {
 		GameObject mainMenu = GameObject.FindGameObjectWithTag ("MainMenu");
 		Vector3 position = mainMenu.transform.position;
 		position.z -= 3;
 		camera.transform.position = position;
+		videoPlayer.Control.Pause ();
+		videoPlayer.Control.Seek (0.0f);
 	}
 }
