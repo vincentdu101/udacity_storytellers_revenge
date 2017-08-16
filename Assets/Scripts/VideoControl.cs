@@ -20,32 +20,11 @@ public class VideoControl : MonoBehaviour {
 	private MediaPlayer currentVideo;
 
 	void Start () {
-//		videoPlayer = GetComponent<UnityEngine.Video.VideoPlayer> ();
-//
-//
-//		if (videoPlayer.clip != null) 
-//		{
-//			videoPlayer.EnableAudioTrack (0, true);
-//			videoPlayer.SetTargetAudioSource(0, audioSource);
-//		}
-
-
+		
 	}
 
 	//Check if input keys have been pressed and call methods accordingly.
 	void Update(){
-		//Play or pause the video.
-//		if (Input.anyKeyDown) 
-//		{
-//			if (currentVideo != null && currentVideo.Control.IsPlaying()) {
-//				currentVideo.Control.Pause();
-//				GameObject controls = GameObject.Find ("Controls");
-//				Vector3 position = controls.transform.position;
-//				position.z -= 3;
-//				camera.transform.position = position;
-//			}
-//
-//		}
 
 	}
 
@@ -74,12 +53,21 @@ public class VideoControl : MonoBehaviour {
 		videoPlayer.Control.Seek (0.0f);
 	}
 
-	public void goToMainMenu() {
-		GameObject mainMenu = GameObject.FindGameObjectWithTag ("MainMenu");
+	public void GoToPanel(string tag) {
+		GameObject mainMenu = GameObject.FindGameObjectWithTag (tag);
 		Vector3 position = mainMenu.transform.position;
 		position.z -= 3;
 		camera.transform.position = position;
 		videoPlayer.Control.Pause ();
 		videoPlayer.Control.Seek (0.0f);
+	}
+
+	public void BackToControls() {
+		GoToPanel ("Controls");
+
+	}
+
+	public void goToMainMenu() {
+		GoToPanel ("MainMenu");
 	}
 }
