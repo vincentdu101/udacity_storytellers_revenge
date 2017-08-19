@@ -3100,7 +3100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_VideoPath
-      value: Assets/IndiaStreetRide-.mp4
+      value: https://www.dropbox.com/s/cmejlyeis6vqiih/106_0003.kava.mp4?dl=1
       objectReference: {fileID: 0}
     - target: {fileID: 427526, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_LocalRotation.y
@@ -3120,7 +3120,7 @@ Prefab:
       objectReference: {fileID: 1696728572}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_VideoLocation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_AutoStart
@@ -3297,7 +3297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_VideoPath
-      value: Assets/IndiaStreetRide-.mp4
+      value: https://www.dropbox.com/s/avtnybv9ewuplwd/ferry.mp4?dl=1
       objectReference: {fileID: 0}
     - target: {fileID: 427526, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_LocalRotation.y
@@ -3317,7 +3317,7 @@ Prefab:
       objectReference: {fileID: 1784959570}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_VideoLocation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11498420, guid: 5a12218ea7e5b7a4e8b89d25e07d237d, type: 2}
       propertyPath: m_AutoStart
