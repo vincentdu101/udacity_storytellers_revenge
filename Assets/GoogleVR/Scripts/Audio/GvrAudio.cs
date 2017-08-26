@@ -195,10 +195,11 @@ public static class GvrAudio {
     if (initialized) {
       Vector3 listenerPosition = listenerTransform.position;
       Vector3 sourceFromListener = sourceTransform.position - listenerPosition;
-      RaycastHit[] hits = Physics.RaycastAll(listenerPosition, sourceFromListener,
-                                             sourceFromListener.magnitude, occlusionMaskValue);
-      foreach (RaycastHit hit in hits) {
-        if (hit.transform != listenerTransform && hit.transform != sourceTransform) {
+      int numHits = Physics.RaycastNonAlloc(listenerPosition, sourceFromListener, occlusionHits,
+                                            sourceFromListener.magnitude, occlusionMaskValue);
+      for (int i = 0; i < numHits; ++i) {
+        if (occlusionHits[i].transform != listenerTransform &&
+            occlusionHits[i].transform != sourceTransform) {
           occlusion += 1.0f;
         }
       }
@@ -270,10 +271,13 @@ public static class GvrAudio {
   /// Maximum allowed reflectivity multiplier of a room surface material.
   public const float maxReflectivity = 2.0f;
 
+  /// Maximum allowed number of raycast hits for occlusion computation per source.
+  public const int maxNumOcclusionHits = 12;
+
   /// Source occlusion detection rate in seconds.
   public const float occlusionDetectionInterval = 0.2f;
 
-  // Number of first-order ambisonic input channels.
+  /// Number of first-order ambisonic input channels.
   public const int numFoaChannels = 4;
 
   [StructLayout(LayoutKind.Sequential)]
@@ -321,9 +325,9 @@ public static class GvrAudio {
   // Converts given |position| and |rotation| from Unity space to audio space.
   private static void ConvertAudioTransformFromUnity (ref Vector3 position,
                                                       ref Quaternion rotation) {
-    pose.SetRightHanded(Matrix4x4.TRS(position, rotation, Vector3.one));
-    position = pose.Position;
-    rotation = pose.Orientation;
+    transformMatrix = flipZ * Matrix4x4.TRS(position, rotation, Vector3.one) * flipZ;
+    position = transformMatrix.GetColumn(3);
+    rotation = Quaternion.LookRotation(transformMatrix.GetColumn(2), transformMatrix.GetColumn(1));
   }
 
   // Returns room properties of the given |room|.
@@ -356,6 +360,9 @@ public static class GvrAudio {
     return roomProperties;
   }
 
+  // Right-handed to left-handed matrix converter (and vice versa).
+  private static readonly Matrix4x4 flipZ = Matrix4x4.Scale(new Vector3(1.0f, 1.0f, -1.0f));
+
   // Boundaries instance to be used in room detection logic.
   private static Bounds bounds = new Bounds(Vector3.zero, Vector3.zero);
 
@@ -368,11 +375,14 @@ public static class GvrAudio {
   // Listener transform.
   private static Transform listenerTransform = null;
 
+  // Pre-allocated raycast hit list for occlusion computation.
+  private static RaycastHit[] occlusionHits = new RaycastHit[maxNumOcclusionHits];
+
   // Occlusion layer mask.
   private static int occlusionMaskValue = -1;
 
-  // 3D pose instance to be used in transform space conversion.
-  private static MutablePose3D pose = new MutablePose3D();
+  // 4x4 transformation matrix to be used in transform space conversion.
+  private static Matrix4x4 transformMatrix = Matrix4x4.identity;
 
 #if UNITY_IOS
   private const string pluginName = "__Internal";
