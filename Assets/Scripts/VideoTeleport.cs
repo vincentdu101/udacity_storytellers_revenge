@@ -10,7 +10,7 @@ public class VideoTeleport : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		camera = GameObject.FindGameObjectWithTag ("MainCameraWrapper");
 	}
 	
 	// Update is called once per frame

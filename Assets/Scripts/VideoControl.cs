@@ -28,13 +28,22 @@ public class VideoControl : MonoBehaviour {
 
 	}
 
+	private void toggleParticleSystem(GameObject videoPlayer, bool visible) {
+		ParticleSystem particles = videoPlayer.GetComponent<ParticleSystem> ();
+		var emission = particles.emission;
+		emission.enabled = visible;
+	}
+
 	public void Pause() {
 		videoPlayer.Control.Pause ();
 	}
 
+
 	public void Play() {
 		GameObject videoPlayerObj = GameObject.Find (videoChosen.text + "VideoPlayer");
+		GameObject videoPlayerWrapper = GameObject.Find (videoChosen.text);
 		Vector3 position = videoPlayerObj.transform.position;
+		toggleParticleSystem (videoPlayerWrapper, false);
 		position.z -= 3;
 		camera.transform.position = position;
 
@@ -55,11 +64,15 @@ public class VideoControl : MonoBehaviour {
 
 	public void GoToPanel(string tag) {
 		GameObject mainMenu = GameObject.FindGameObjectWithTag (tag);
+		GameObject videoPlayerWrapper = GameObject.Find (videoChosen.text);
 		Vector3 position = mainMenu.transform.position;
+		toggleParticleSystem (videoPlayerWrapper, true);
 		position.z -= 3;
 		camera.transform.position = position;
-		videoPlayer.Control.Pause ();
-		videoPlayer.Control.Seek (0.0f);
+		if (videoPlayer) {
+			videoPlayer.Control.Pause ();
+			videoPlayer.Control.Seek (0.0f);
+		}
 	}
 
 	public void BackToControls() {

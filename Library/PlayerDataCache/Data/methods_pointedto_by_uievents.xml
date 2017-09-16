@@ -1,0 +1,22 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="VideoControl">
+			<method name="Pause"/>
+			<method name="Restart"/>
+			<method name="PlayBtn"/>
+			<method name="goToMainMenu"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="BackToControls"/>
+			<method name="Play"/>
+			<method name="BackToControls"/>
+			<method name="Pause"/>
+			<method name="PlayBtn"/>
+			<method name="Restart"/>
+		</type>
+		<type fullname="VideoTeleport">
+			<method name="goToVideo"/>
+			<method name="goToVideo"/>
+		</type>
+	</assembly>
+</linker>

@@ -9,6 +9,7 @@ TagManager:
   - GreecePlayer
   - Controls
   - MainMenu
+  - MainCameraWrapper
   layers:
   - Default
   - TransparentFX
