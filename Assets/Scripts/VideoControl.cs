@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using RenderHeads.Media.AVProVideo;
+using Gvr.Internal;
 
 public class VideoControl : MonoBehaviour {
 
@@ -16,16 +17,19 @@ public class VideoControl : MonoBehaviour {
 	public MediaPlayer video1;
 	public MediaPlayer video2;
 	public MediaPlayer videoPlayer;
+	public GvrAudioSource audioSource;
 	public GameObject videoSphere;
 	private MediaPlayer currentVideo;
 
 	void Start () {
-		
+		audioSource = GameObject.FindGameObjectWithTag ("Audio").GetComponent<GvrAudioSource>();
 	}
 
 	//Check if input keys have been pressed and call methods accordingly.
 	void Update(){
-
+		if (videoPlayer && videoPlayer.Control.IsFinished ()) {
+			GoToPanel ("Credits");
+		}
 	}
 
 	private void toggleParticleSystem(GameObject videoPlayer, bool visible) {
@@ -46,6 +50,7 @@ public class VideoControl : MonoBehaviour {
 		toggleParticleSystem (videoPlayerWrapper, false);
 		position.z -= 3;
 		camera.transform.position = position;
+		audioSource.Pause ();
 
 		if (videoChosen.text == "Iceland") {
 			video1.Control.Play ();
@@ -53,6 +58,7 @@ public class VideoControl : MonoBehaviour {
 			video2.Control.Play ();
 		}
 	}
+
 
 	public void PlayBtn() {
 		videoPlayer.Control.Play ();
@@ -63,15 +69,18 @@ public class VideoControl : MonoBehaviour {
 	}
 
 	public void GoToPanel(string tag) {
-		GameObject mainMenu = GameObject.FindGameObjectWithTag (tag);
-		GameObject videoPlayerWrapper = GameObject.Find (videoChosen.text);
-		Vector3 position = mainMenu.transform.position;
-		toggleParticleSystem (videoPlayerWrapper, true);
-		position.z -= 3;
-		camera.transform.position = position;
-		if (videoPlayer) {
-			videoPlayer.Control.Pause ();
-			videoPlayer.Control.Seek (0.0f);
+		if (videoChosen) {
+			GameObject mainMenu = GameObject.FindGameObjectWithTag (tag);
+			GameObject videoPlayerWrapper = GameObject.Find (videoChosen.text);
+			Vector3 position = mainMenu.transform.position;
+			toggleParticleSystem (videoPlayerWrapper, true);
+			position.z -= 3;
+			camera.transform.position = position;
+			if (videoPlayer) {
+				videoPlayer.Control.Pause ();
+				videoPlayer.Control.Seek (0.0f);
+			}
+			audioSource.Play ();
 		}
 	}
 
@@ -82,5 +91,9 @@ public class VideoControl : MonoBehaviour {
 
 	public void goToMainMenu() {
 		GoToPanel ("MainMenu");
+	}
+
+	public void VideoPlayerEvents() {
+
 	}
 }

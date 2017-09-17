@@ -144,7 +144,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 64e53bc128400f563a86ade43816f1c3 Assembly-CSharp.dll:.FloatTile
 0517565dbd0db41787f110674850ca7b Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.SampleApp_Multiple
 5e103f4ea07c73e2bd8921515fff4a7e Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.PlaybackSync
-0d3433d16bf128d67ba5bd47d4a876b5 Assembly-CSharp.dll:.VideoControl
+7d59ee4f8d083d76e28ded33178baeee Assembly-CSharp.dll:.VideoControl
 3cdbcbe3eecc7b2618bb53f62d0d1466 Assembly-CSharp.dll:.PagedScrollRect
 03f12694d8815c5c1846b514244afecc Assembly-CSharp.dll:.GvrAllEventsTrigger
 8dcc2f1f2300fb8d73cea378ddc8fcc8 Assembly-CSharp.dll:.ChildrenPageProvider
@@ -154,7 +154,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.AutoRotate
 19fc27323532d4ef5ff7bd1ed99e59f3 Assembly-CSharp.dll:.GvrTrackedController
 d41e856001c43524a7a52471c8bf3b63 Assembly-CSharp.dll:.GvrLaserPointer
-c5ed78e1a7daf56625c8634c66a788d1 Assembly-CSharp.dll:.VideoTeleport
+5f043f59ba92012c615117778a3fd9af Assembly-CSharp.dll:.VideoTeleport
 22cf9342c61412d705cedd2b865fa22c Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.UpdateStereoMaterial
 8157e765c94d99be24f2a9baf4871640 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.VCR
 3c5863ab5afea9f9cefae6e468ec629d Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.DisplayIMGUI

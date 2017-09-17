@@ -10,6 +10,8 @@ TagManager:
   - Controls
   - MainMenu
   - MainCameraWrapper
+  - Credits
+  - Audio
   layers:
   - Default
   - TransparentFX

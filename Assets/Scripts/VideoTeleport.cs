@@ -7,6 +7,7 @@ public class VideoTeleport : MonoBehaviour {
 
 	public GameObject camera;
 	public Text videoChosen;
+	public Text creditsVideoChosen;
 
 	// Use this for initialization
 	void Start () {
@@ -24,5 +25,6 @@ public class VideoTeleport : MonoBehaviour {
 		position.z -= 3;
 		camera.transform.position = position;
 		videoChosen.text = choice;
+		creditsVideoChosen.text = choice;
 	}
 }
